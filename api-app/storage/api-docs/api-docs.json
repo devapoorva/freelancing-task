@@ -1,0 +1,83 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Laravel API Application",
+        "description": "API wtitten by Apoorva Raj",
+        "license": {
+            "name": "MIT"
+        },
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/v1/login": {
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "User Authentication",
+                "operationId": "42e949d6e1e4dbad4aaaf56f4a132d6f",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "email": {
+                                        "type": "string",
+                                        "example": "example@gmail.com"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "example": "password"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Login Successful"
+                    },
+                    "401": {
+                        "description": "Invalid credential"
+                    },
+                    "400": {
+                        "description": "The email | password field is required."
+                    }
+                }
+            }
+        },
+        "/api/v1/user": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "User Data",
+                "operationId": "8dc24ca18f0f50ffa24a4a90e2e32dc5",
+                "responses": {
+                    "200": {
+                        "description": "User data"
+                    },
+                    "401": {
+                        "description": "Invalid user"
+                    }
+                },
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "BearerAuth": {
+                "type": "http",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    }
+}

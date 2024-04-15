@@ -1,0 +1,43 @@
+.appointment h1{
+    color: #0055a5;
+}
+.form-title{
+    min-height: 80px;
+    color: #0055a5;
+    background-color: #f1f1f1;
+    padding: 20px 5px;
+}
+.justify-content-space-around{
+    justify-content: space-around;
+}
+.selectedTime{
+    padding-left: 20px;
+}
+.phone-icon{
+    max-height: 150px;
+    max-width: 150px;
+}
+.text-green{
+    color: green;
+    font-weight: bolder;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+.text-blue{
+    color: #0055a5;
+} 
+.text-quote{
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+}
+.quote-div{
+    background: #f1f1f1;
+    padding: 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
